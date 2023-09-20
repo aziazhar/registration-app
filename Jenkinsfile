@@ -3,7 +3,7 @@ pipeline {
     tools {
          jdk 'Java17'
          maven 'Maven3'
-         git 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Git'
+         git 'https://github.com/aziazhar/register-app'
   }
    stages{
       stage("Cleanup Workspace"){
