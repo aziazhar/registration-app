@@ -1,15 +1,15 @@
 pipeline {
-    agent { label 'Agent-Jenkins' }
+    agent any
     tools {
          jdk 'Java17'
          maven 'Maven3'
-         git 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Git'
+		  git 'C:\Program Files\Gi'
   }
    stages{
    
       stage("Cleanup Workspace"){
           steps {
-          clearWs()     
+          cleanWs()     
      } 
    } 
 
@@ -36,4 +36,3 @@ pipeline {
     }
 
 }
-   
