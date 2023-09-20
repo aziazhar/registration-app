@@ -3,7 +3,7 @@ pipeline {
     tools {
          jdk 'Java17'
          maven 'Maven3'
-         git 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Git'
+         git 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Git'
   }
    stages{
    
