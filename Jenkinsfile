@@ -5,7 +5,7 @@ pipeline {
          maven 'Maven3'
   }
    stages{
-      stage("Cleanup-Workspace"){
+      stage("Cleanup Workspace"){
           steps {
           clearWs()     
      } 
@@ -17,21 +17,19 @@ pipeline {
      } 
    } 
 
-      stages('Build Application') {
+      stages("Build Application") {
           steps {
           sh "mvn clean package"
           }
              
      } 
 
-        stages('Test Application') {
+        stages("Test Application") {
           steps {
           sh "mvn test"
           }
              
      } 
-
-
    } 
 
-  }
+}
