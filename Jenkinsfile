@@ -3,7 +3,7 @@ pipeline {
     tools {
          jdk 'Java17'
          maven 'Maven3'
-         git 'https://github.com/aziazhar/register-app'
+         git 'https://github.com/aziazhar/registration-app.git'
   }
    stages{
    
@@ -15,7 +15,7 @@ pipeline {
 
     stage("Checkout from SCM"){
           steps {
-            git branch: 'main', creditionalsId: 'github', url: 'https://github.com/aziazhar/register-app'
+            git branch: 'main', creditionalsId: 'github', url: 'https://github.com/aziazhar/registration-app.git'
      } 
    } 
 
