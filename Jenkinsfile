@@ -3,6 +3,7 @@ pipeline {
     tools {
          jdk 'Java17'
          maven 'Maven3'
+         git 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Git'
   }
    stages{
       stage("Cleanup Workspace"){
@@ -13,7 +14,7 @@ pipeline {
 
     stage("Checkout from SCM"){
           steps {
-            git branch: 'main', credentialsId: 'github', url: 'https://github.com/aziazhar/registration-app.git'
+            git branch: 'main', creditionalsId: 'github', url: 'https://github.com/aziazhar/register-app'
      } 
    } 
 
@@ -31,5 +32,3 @@ pipeline {
              
      } 
    } 
-
-}
