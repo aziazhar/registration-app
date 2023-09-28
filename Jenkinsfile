@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'Jenkins_Agent'}
+    agent any
     tools {
          jdk 'Java17'
          maven 'Maven3'
@@ -15,20 +15,20 @@ pipeline {
 
     stage("Checkout from SCM"){
           steps {
-             git branch: 'main', credentialsId: '', url: 'https://github.com/aziazhar/registration-app.git'
+             git branch: 'main', credentialsId: '', url: 'https://github.com/aziazhar/registration-app'
      } 
    } 
 
       stage("Build Application") {
           steps {
-          bat "mvn clean package"
+          sh"mvn clean package"
           }
              
      } 
 
         stage("Test Application") {
           steps {
-          bat "mvn test"
+          sh"mvn test"
           }
              
      } 
