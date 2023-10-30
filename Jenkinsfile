@@ -45,23 +45,7 @@ pipeline {
              
      } 
 	
- //      stage('Sonarqube Analysis') {
- //            steps {
- //                sh ''' $SCANNER_HOME/bin/sonar-scanner \
- //                -Dsonar.host.url=http://13.235.103.113:9000// \
- //                -Dsonar.login=squ_0398341302b5dedd04cef8168ff1bc627b010fb3 \
- //                -Dsonar.projectName=shopping-cart \
- //                -Dsonar.java.binaries=. \
- //                -Dsonar.projectKey=shopping-cart '''
- //            }
- //        }
-	
-	// stage("Build Application") {
- //          steps {
- //          sh"mvn package -DskipTests"
- //          }
-             
- //     }
+
 	 
     }
 
